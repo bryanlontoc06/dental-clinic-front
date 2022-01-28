@@ -16,7 +16,7 @@ import PrivateRoute from './auth/PrivateRoute'
 
 const MainRouter = () => {
     const location = useLocation();
-    if(isAuthenticated() && ((location.pathname === '/signin') || (location.pathname === '/signup'))) {
+    if(isAuthenticated() && ((location.pathname === '/signin') || (location.pathname === '/signup') || (location.pathname === '/admin'))) {
         return <Redirect to="/" />
     }
     return (
